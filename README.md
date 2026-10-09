@@ -3,7 +3,7 @@
 A personal study of [Binius](https://www.binius.xyz/), a proof system for binary circuits.
 Much of the underlying math is studied in [lamafab/algebra](https://github.com/lamafab/algebra).
 
-> **Work in progress.** Charts on sumcheck, binary FRI, and binary field towering are still to come.
+> **Work in progress.** Charts on binary FRI and binary field towering are still to come.
 > Some of the Lean files from `algebra` might move here in the near future.
 
 ![Binius overview](assets/00_binius.png)
@@ -38,6 +38,18 @@ circuit f : {0,1}ⁿ → 𝔽₂
 ```
 
 ![Multilinear extension](assets/01_mle.png)
+
+## Sumcheck
+
+The hypercube sum is reduced one variable at a time: each round the prover sends a univariate
+polynomial in the variable being eliminated, the verifier answers with a random challenge, and
+the claim is rewritten over the remaining space. A false claim survives only if it agrees with
+the honest polynomial at the challenge point, so cheating is caught with probability at most
+`d/|𝔽|` per round. After `n` rounds the claim is a single evaluation `p̃(r) = v`, which sumcheck
+hands off to the commitment scheme. The chart walks through a two-variable example over a small
+field mod 37.
+
+![Sumcheck](assets/02_sumcheck.png)
 
 ## Further reading
 
