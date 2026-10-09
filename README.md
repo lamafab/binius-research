@@ -13,9 +13,8 @@ Much of the underlying math is studied in [lamafab/algebra](https://github.com/l
 Binius lets a prover convince a verifier that a boolean circuit is satisfied without the
 verifier re-executing it. Three components carry the proof:
 
-1. **Multilinear extension (MLE).** The circuit's truth table is extended into the unique
-   multilinear polynomial agreeing with it on the whole hypercube. A boolean circuit
-   `f : {0,1}ⁿ → 𝔽₂` becomes this polynomial, whose degree is at most one in each variable.
+1. **Multilinear extension (MLE).** The circuit's truth table is extended into a multilinear
+   polynomial over the boolean hypercube.
 2. **Sumcheck.** A claim about all `2ⁿ` gate evaluations is written as a hypercube sum and
    reduced, round by round, to a single evaluation claim `p̃(r) = v` at a random point `r`.
 3. **Binary FRI and polynomial commitment.** The MLE table is Reed-Solomon encoded over
@@ -36,6 +35,12 @@ circuit f : {0,1}ⁿ → 𝔽₂
   → commitment: RS-encode over GF(2ᵏ), Merkle-commit, fold and open at r
   → verifier accepts iff the opened value equals v
 ```
+
+## Multilinear extension
+
+The circuit's truth table is extended into the unique multilinear polynomial agreeing with it on
+the whole hypercube. A boolean circuit `f : {0,1}ⁿ → 𝔽₂` becomes this polynomial, whose degree is
+at most one in each variable.
 
 ![Multilinear extension](assets/01_mle.png)
 
