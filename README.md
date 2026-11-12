@@ -60,3 +60,4 @@ field mod 37.
 ## Further reading
 
 - [lamafab/algebra](https://github.com/lamafab/algebra): the algebra repository with the Lean formalization of the MLE, sumcheck, and binary FRI building blocks
+- [lamafab/rs-proximity-lean](https://github.com/lamafab/rs-proximity-lean): Reed-Solomon proximity gap conjectures that binary FRI relies on for soundness.
