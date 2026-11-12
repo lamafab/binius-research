@@ -1,10 +1,11 @@
 # Binius Research
 
 A personal study of [Binius](https://www.binius.xyz/), a proof system for binary circuits.
-Much of the underlying math is studied in [lamafab/algebra](https://github.com/lamafab/algebra).
+Much of the underlying math is studied in [lamafab/algebra](https://github.com/lamafab/algebra)
+and [lamafab/rs-proximity-lean](https://github.com/lamafab/rs-proximity-lean).
 
 > **Work in progress.** Charts on binary FRI and binary field towering are still to come.
-> Some of the Lean files from `algebra` might move here in the near future.
+> Some of the Lean files from `algebra` and `rs-proximity-lean` might move here in the near future.
 
 ![Binius overview](assets/00_binius.png)
 
